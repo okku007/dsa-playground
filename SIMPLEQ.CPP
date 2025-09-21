@@ -88,6 +88,14 @@ public:
 			cout<<arr[i]<<" ";
 		}
 	}
+	int peep()
+	{
+		int i,data;
+		cout<<"Which element u want"<<endl;
+		cin>>i;
+		data=arr[rear-i+1];
+		return data;
+	}
 };
 
 int main()
@@ -105,7 +113,8 @@ int main()
 		cout<<"4. isFull"<<endl;
 		cout<<"5. count"<<endl;
 		cout<<"6. display"<<endl;
-		cout<<"7. Clear Screen";
+		cout<<"7. Clear Screen"<<endl;
+		cout<<"8. Peep";
 
 		cin>>option;
 		switch(option)
@@ -150,6 +159,12 @@ int main()
 			case 7:
 				clrscr();
 				break;
+			case 8:
+				value=q1.peep();
+				if(value!=0){
+					cout<<"The selected element is: "<<value;
+					break;
+				}
 
 			default:
 				cout<<"Select number from the given list"<<endl;
